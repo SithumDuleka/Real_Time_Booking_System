@@ -1,0 +1,40 @@
+<div class="position-relative">
+    <div class="modal modal-sheet position-relative d-block p-4 py-md-5" tabindex="-1" role="dialog" id="modalTour" style="left: 0;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-body p-5">
+            <h2 class="fw-bold mb-0">Enter Configuration</h2>
+            <ul class="d-grid gap-3 my-5 list-unstyled small">
+              <li class="d-grid gap-2">
+                <div class="mb-0">
+                  <label for="totalTickets" class="form-label mb-0"><h6>Total Number of Tickets</h6></label>
+                  <input type="number" id="totalTickets" class="form-control" [(ngModel)]="config.totalTickets" placeholder="Enter total tickets" />
+                </div>
+              </li>
+              <li class="d-grid gap-2">
+                <div class="mb-0">
+                  <label for="releaseRate" class="form-label mb-0"><h6>Release Rate</h6></label>
+                  <input type="number" id="releaseRate" class="form-control"  [(ngModel)]="config.releaseRate" placeholder="Enter release rate" />
+                </div>
+              </li>
+              <li class="d-grid gap-2">
+                <div class="mb-0">
+                  <label for="customerRetrievalRate" class="form-label mb-0"><h6>Customer Retrieval Rate</h6></label>
+                  <input type="number" id="customerRetrievalRate" class="form-control" [(ngModel)]="config.customerRetrievalRate" placeholder="Enter retrieval rate" />
+                </div>
+              </li>
+              <li class="d-grid gap-2">
+                <div class="mb-0">
+                  <label for="maxTicketCapacity" class="form-label mb-0"><h6>Max Ticket Capacity</h6></label>
+                  <input type="number"  id="maxTicketCapacity"  class="form-control"    [(ngModel)]="config.maxTicketCapacity" placeholder="Enter max capacity"  />
+                </div>
+              </li>
+            </ul>
+            <button type="button"class="btn btn-lg btn-primary mt-2 w-100" (click)="submitConfiguration()">
+              Submit Configuration
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

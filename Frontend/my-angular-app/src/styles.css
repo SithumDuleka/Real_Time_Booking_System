@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+#modalTour {
+    position: relative;
+    left: 0; /* Aligns the modal to the left side of the parent container */
+    top: 0; /* Optional: Adjust vertical alignment */
+    max-width: 500px; /* Optional: Set a fixed width */
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .list-group-item {
+    font-family: monospace;
+    color: #333;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

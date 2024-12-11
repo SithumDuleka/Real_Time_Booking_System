@@ -1,0 +1,15 @@
+<div class="container my-4">
+    <h2 class="text-center">Simulation Logs</h2>
+    <div class="card">
+      <div class="card-body">
+        <!-- <ul class="list-group" *ngIf="logs && logs.length > 0; else noLogs">
+          <li class="list-group-item" *ngFor="let log of logs">
+            {{ log }}
+          </li>
+        </ul> -->
+        <ng-template #noLogs>
+          <p class="text-center text-muted">No logs available.</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>

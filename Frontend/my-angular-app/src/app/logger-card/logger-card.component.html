@@ -1,0 +1,18 @@
+
+  <div class="window">
+    <div class="winhead">
+      <div class="button">
+        <div class="close"></div>
+        <div class="min"></div>
+        <div class="max"></div>      
+      </div>
+      <div class="title">Logger</div>
+    </div>
+    <div class="winbody">
+      <ul>
+        <li *ngFor="let update of liveUpdates">
+          {{ update }}
+        </li>
+      </ul>
+    </div>
+  </div>
