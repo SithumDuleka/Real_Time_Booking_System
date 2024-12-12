@@ -1,6 +1,5 @@
 package com.example.ticketbooking.service;
 
-
 import com.example.ticketbooking.dto.Configuration;
 import com.example.ticketbooking.model.TicketPool;
 import com.example.ticketbooking.simulation.Customer;
@@ -11,20 +10,42 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Service class to manage the ticket booking simulation.
+ */
 @Service
 public class TicketService {
+
+    /**
+     * Injected instance of the TicketPool.
+     */
     @Autowired
     private TicketPool ticketPool;
 
-
+    /**
+     * List of vendor threads.
+     */
     private final List<Thread> vendorThreads = new ArrayList<>();
+
+    /**
+     * List of customer threads.
+     */
     private final List<Thread> customerThreads = new ArrayList<>();
 
-
+    /**
+     * Initializes the ticket pool with the given configuration.
+     *
+     * @param config The configuration object.
+     */
     public void initializePool(Configuration config) {
         ticketPool.initialize(config.getTotalTickets(), config.getMaxTicketCapacity());
     }
 
+    /**
+     * Starts the simulation by creating and starting vendor and customer threads.
+     *
+     * @param config The configuration object.
+     */
     public void startSimulation(Configuration config) {
         for (int i = 0; i < 5; i++) {
             String vendorName = "Vendor-" + (i + 1);
@@ -41,30 +62,11 @@ public class TicketService {
             customerThreads.add(customerThread);
             customerThread.start();
         }
-//        while (!ticketPool.isTerminated()) {
-//            try {
-//                Thread.sleep(1000); // Check every second
-//            } catch (InterruptedException e) {
-//                Thread.currentThread().interrupt();
-//            }
-//        }
-//
-//        System.out.println("Stopping all operations...");
-//
-//        for (Thread thread : customerThreads) {
-//            thread.interrupt();
-//        }
-//        customerThreads.clear();
-//
-//        for (Thread thread : vendorThreads) {
-//            thread.interrupt();
-//        }
-//        vendorThreads.clear();
-//
-//        System.out.println("All threads terminated successfully.");
-
     }
 
+    /**
+     * Stops the simulation by interrupting all running threads.
+     */
     public void stopSimulation() {
         vendorThreads.forEach(Thread::interrupt);
         customerThreads.forEach(Thread::interrupt);
@@ -72,8 +74,13 @@ public class TicketService {
         customerThreads.clear();
     }
 
+    /**
+     * Gets the current simulation status.
+     *
+     * @return A string representation of the simulation status.
+     */
     public Object getSimulationStatus() {
-        // Return mock status for now
-        return "Simulation Status Placeholder";
+        // Implement logic to provide detailed simulation status
+        return "Simulation is currently running. Total tickets sold: " + ticketPool.getTotalSoldTickets();
     }
 }

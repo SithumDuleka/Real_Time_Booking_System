@@ -12,16 +12,33 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
 
+/**
+ * This class defines REST API endpoints for managing simulations in a ticket booking system.
+ * It interacts with the {@link TicketService} to perform simulation operations like saving configurations, starting simulations, and stopping simulations.
+ */
 @RestController
 @RequestMapping("/api/simulation")
 @CrossOrigin(origins = "http://localhost:4200")
 public class SimulationController {
 
+    /**
+     * Injected instance of the {@link TicketService} used to interact with the simulation logic.
+     */
     @Autowired
     private TicketService ticketService;
 
-    private Configuration savedConfiguration; // Holds the saved configuration
+    /**
+     * Holds the most recently saved configuration object in memory.
+     */
+    private Configuration savedConfiguration;
 
+    /**
+     * This endpoint saves a provided {@link Configuration} object to a JSON file and stores it in memory for future reference.
+     *
+     * @param config The configuration object to be saved.
+     * @return A ResponseEntity object indicating success or failure with a message.
+     * @throws IOException If there's an error writing the configuration to the file.
+     */
     @PostMapping("/save")
     public ResponseEntity<?> saveConfiguration(@RequestBody Configuration config) {
         try {
@@ -45,6 +62,13 @@ public class SimulationController {
         }
     }
 
+    /**
+     * This endpoint starts a simulation based on the previously saved {@link Configuration}.
+     * It checks if a configuration is saved and then calls the `TicketService` methods to initialize and start the simulation.
+     *
+     * @return A ResponseEntity object indicating success or failure with a message.
+     * @throws Exception If there's an error during simulation initialization or start.
+     */
     @PostMapping("/start")
     public ResponseEntity<?> startSimulation() {
         try {
@@ -63,6 +87,12 @@ public class SimulationController {
         }
     }
 
+    /**
+     * This endpoint stops the ongoing simulation by calling the `stopSimulation` method of the injected {@link TicketService}.
+     *
+     * @return A ResponseEntity object indicating success with a message.
+     * @throws Exception If there's an error during stopping the simulation.
+     */
     @PostMapping("/stop")
     public ResponseEntity<?> stopSimulation() {
         try {
@@ -73,6 +103,13 @@ public class SimulationController {
                     .body(Collections.singletonMap("error", e.getMessage()));
         }
     }
+
+    /**
+     * This endpoint retrieves the current simulation status from the {@link TicketService}. The specific format of the returned object
+     * depends on the implementation of the `getSimulationStatus` method in the service.
+     *
+     * @return The current simulation status as returned by the `TicketService`.
+     */
     @GetMapping("/status")
     public Object getSimulationStatus() {
         return ticketService.getSimulationStatus();

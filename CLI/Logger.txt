@@ -1,0 +1,139 @@
+Vendor-1 1 tickets added to pool... Current pool size :1  Total added tickets :1
+No tickets Available...Customer-5 is waiting
+No tickets Available...Customer-4 is waiting
+No tickets Available...Customer-3 is waiting
+No tickets Available...Customer-2 is waiting
+No tickets Available...Customer-1 is waiting
+Vendor-5 10 tickets added to pool... Current pool size :11  Total added tickets :11
+Vendor-4 7 tickets added to pool... Current pool size :18  Total added tickets :18
+Vendor-3 5 tickets added to pool... Current pool size :23  Total added tickets :23
+Vendor-2 4 tickets added to pool... Current pool size :27  Total added tickets :27
+Customer-1 is purchased... 5 Total number of ticket sold : 5
+Customer-2 is purchased... 2 Total number of ticket sold : 7
+Customer-3 is purchased... 10 Total number of ticket sold : 17
+Customer-4 is purchased... 6 Total number of ticket sold : 23
+Customer-5 is purchased... 4 Total number of ticket sold : 27
+Vendor-1 5 tickets added to pool... Current pool size :5  Total added tickets :32
+Vendor-5 5 tickets added to pool... Current pool size :10  Total added tickets :37
+Vendor-3 2 tickets added to pool... Current pool size :12  Total added tickets :39
+Vendor-4 2 tickets added to pool... Current pool size :14  Total added tickets :41
+Vendor-2 6 tickets added to pool... Current pool size :20  Total added tickets :47
+Vendor-4 5 tickets added to pool... Current pool size :25  Total added tickets :52
+Vendor-3 7 tickets added to pool... Current pool size :32  Total added tickets :59
+Vendor-5 2 tickets added to pool... Current pool size :34  Total added tickets :61
+Vendor-2 2 tickets added to pool... Current pool size :36  Total added tickets :63
+Vendor-1 6 tickets added to pool... Current pool size :42  Total added tickets :69
+Vendor-4 9 tickets added to pool... Current pool size :51  Total added tickets :78
+Ticket Pool is Full Vendor-1 is waiting
+Ticket Pool is Full Vendor-5 is waiting
+Ticket Pool is Full Vendor-3 is waiting
+Ticket Pool is Full Vendor-2 is waiting
+Ticket Pool is Full Vendor-4 is waiting
+Customer-2 is purchased... 2 Total number of ticket sold : 29
+Vendor-1 4 tickets added to pool... Current pool size :53  Total added tickets :82
+Customer-5 is purchased... 7 Total number of ticket sold : 36
+Customer-3 is purchased... 1 Total number of ticket sold : 37
+Customer-1 is purchased... 3 Total number of ticket sold : 40
+Vendor-4 5 tickets added to pool... Current pool size :47  Total added tickets :87
+Vendor-2 2 tickets added to pool... Current pool size :49  Total added tickets :89
+Vendor-3 6 tickets added to pool... Current pool size :55  Total added tickets :95
+Ticket Pool is Full Vendor-5 is waiting
+Customer-4 is purchased... 7 Total number of ticket sold : 47
+Vendor-5 6 tickets added to pool... Current pool size :54  Total added tickets :101
+Ticket Pool is Full Vendor-1 is waiting
+Ticket Pool is Full Vendor-4 is waiting
+Ticket Pool is Full Vendor-2 is waiting
+Ticket Pool is Full Vendor-3 is waiting
+Ticket Pool is Full Vendor-5 is waiting
+Customer-2 is purchased... 9 Total number of ticket sold : 56
+Vendor-1 5 tickets added to pool... Current pool size :50  Total added tickets :106
+Ticket Pool is Full Vendor-5 is waiting
+Ticket Pool is Full Vendor-3 is waiting
+Ticket Pool is Full Vendor-2 is waiting
+Ticket Pool is Full Vendor-4 is waiting
+Customer-3 is purchased... 9 Total number of ticket sold : 65
+Customer-1 is purchased... 4 Total number of ticket sold : 69
+Customer-5 is purchased... 2 Total number of ticket sold : 71
+Customer-4 is purchased... 1 Total number of ticket sold : 72
+Vendor-4 1 tickets added to pool... Current pool size :35  Total added tickets :107
+Vendor-2 5 tickets added to pool... Current pool size :40  Total added tickets :112
+Vendor-3 10 tickets added to pool... Current pool size :50  Total added tickets :122
+Ticket Pool is Full Vendor-5 is waiting
+Ticket Pool is Full Vendor-1 is waiting
+Ticket Pool is Full Vendor-4 is waiting
+Ticket Pool is Full Vendor-3 is waiting
+Ticket Pool is Full Vendor-2 is waiting
+Customer-2 is purchased... 5 Total number of ticket sold : 77
+Vendor-5 7 tickets added to pool... Current pool size :52  Total added tickets :129
+Customer-5 is purchased... 5 Total number of ticket sold : 82
+Customer-4 is purchased... 3 Total number of ticket sold : 85
+Customer-3 is purchased... 10 Total number of ticket sold : 95
+Customer-1 is purchased... 9 Total number of ticket sold : 104
+Vendor-2 1 tickets added to pool... Current pool size :26  Total added tickets :130
+Vendor-3 1 tickets added to pool... Current pool size :27  Total added tickets :131
+Vendor-4 3 tickets added to pool... Current pool size :30  Total added tickets :134
+Vendor-1 6 tickets added to pool... Current pool size :36  Total added tickets :140
+Vendor-5 1 tickets added to pool... Current pool size :37  Total added tickets :141
+Vendor-1 4 tickets added to pool... Current pool size :41  Total added tickets :145
+Vendor-4 2 tickets added to pool... Current pool size :43  Total added tickets :147
+Vendor-3 2 tickets added to pool... Current pool size :45  Total added tickets :149
+Vendor-2 2 tickets added to pool... Current pool size :47  Total added tickets :151
+Vendor-5 5 tickets added to pool... Current pool size :52  Total added tickets :156
+Ticket Pool is Full Vendor-1 is waiting
+Ticket Pool is Full Vendor-3 is waiting
+Ticket Pool is Full Vendor-4 is waiting
+Ticket Pool is Full Vendor-2 is waiting
+Ticket Pool is Full Vendor-5 is waiting
+Customer-2 is purchased... 5 Total number of ticket sold : 109
+Vendor-1 1 tickets added to pool... Current pool size :48  Total added tickets :157
+Vendor-5 2 tickets added to pool... Current pool size :50  Total added tickets :159
+Ticket Pool is Full Vendor-2 is waiting
+Ticket Pool is Full Vendor-4 is waiting
+Ticket Pool is Full Vendor-3 is waiting
+Customer-3 is purchased... 4 Total number of ticket sold : 113
+Customer-1 is purchased... 3 Total number of ticket sold : 116
+Customer-4 is purchased... 5 Total number of ticket sold : 121
+Customer-5 is purchased... 1 Total number of ticket sold : 122
+Vendor-3 8 tickets added to pool... Current pool size :45  Total added tickets :167
+Vendor-4 1 tickets added to pool... Current pool size :46  Total added tickets :168
+Vendor-2 2 tickets added to pool... Current pool size :48  Total added tickets :170
+Vendor-1 5 tickets added to pool... Current pool size :53  Total added tickets :175
+Ticket Pool is Full Vendor-5 is waiting
+Ticket Pool is Full Vendor-4 is waiting
+Ticket Pool is Full Vendor-2 is waiting
+Ticket Pool is Full Vendor-3 is waiting
+Ticket Pool is Full Vendor-1 is waiting
+Customer-2 is purchased... 4 Total number of ticket sold : 126
+Vendor-5 2 tickets added to pool... Current pool size :51  Total added tickets :177
+Ticket Pool is Full Vendor-1 is waiting
+Ticket Pool is Full Vendor-3 is waiting
+Ticket Pool is Full Vendor-2 is waiting
+Ticket Pool is Full Vendor-4 is waiting
+Customer-3 is purchased... 10 Total number of ticket sold : 136
+Customer-5 is purchased... 1 Total number of ticket sold : 137
+Customer-1 is purchased... 1 Total number of ticket sold : 138
+Customer-4 is purchased... 7 Total number of ticket sold : 145
+Vendor-4 1 tickets added to pool... Current pool size :33  Total added tickets :178
+Vendor-2 9 tickets added to pool... Current pool size :42  Total added tickets :187
+Vendor-3 6 tickets added to pool... Current pool size :48  Total added tickets :193
+Vendor-1 4 tickets added to pool... Current pool size :52  Total added tickets :197
+Ticket Pool is Full Vendor-5 is waiting
+Ticket Pool is Full Vendor-4 is waiting
+Ticket Pool is Full Vendor-2 is waiting
+Ticket Pool is Full Vendor-3 is waiting
+Ticket Pool is Full Vendor-1 is waiting
+Customer-2 is purchased... 6 Total number of ticket sold : 151
+Vendor-5 3 tickets added to pool... Current pool size :49  Total added tickets :200
+Vendor-1 0 tickets added to pool... Current pool size :49  Total added tickets :200
+Vendor-3 0 tickets added to pool... Current pool size :49  Total added tickets :200
+Vendor-2 0 tickets added to pool... Current pool size :49  Total added tickets :200
+Vendor-4 0 tickets added to pool... Current pool size :49  Total added tickets :200
+Customer-4 is purchased... 1 Total number of ticket sold : 152
+Customer-5 is purchased... 1 Total number of ticket sold : 153
+Customer-1 is purchased... 5 Total number of ticket sold : 158
+Customer-3 is purchased... 6 Total number of ticket sold : 164
+Customer-2 is purchased... 6 Total number of ticket sold : 170
+Customer-4 is purchased... 9 Total number of ticket sold : 179
+Customer-5 is purchased... 2 Total number of ticket sold : 181
+Customer-3 is purchased... 9 Total number of ticket sold : 190
+Customer-1 is purchased... 1 Total number of ticket sold : 191

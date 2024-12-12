@@ -1,0 +1,7 @@
+com.example.ticketbooking
+com.example.ticketbooking.controller
+com.example.ticketbooking.dto
+com.example.ticketbooking.model
+com.example.ticketbooking.service
+com.example.ticketbooking.simulation
+com.example.ticketbooking.websocket
