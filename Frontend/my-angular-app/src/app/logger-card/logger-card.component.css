@@ -8,7 +8,7 @@ body {
   
   .window {
     margin: 0px auto;
-    width: 600px;
+    width: 690px;
     height: 400px;
     display: flex;
     flex-direction: column;

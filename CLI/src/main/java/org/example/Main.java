@@ -9,11 +9,10 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
-
-
-
     public static ArrayList<Thread> customersThreadlist=new ArrayList<>();
+    public static ArrayList<Customer> customerslist=new ArrayList<>();
     public static ArrayList<Thread> VendoresThreadlist=new ArrayList<>();
+    public static ArrayList<Vendor> Vendoreslist=new ArrayList<>();
     public static  ticketPool ticketPool1;
     public static boolean stopCommandReceived = false;
     public static void main(String[] args) {
@@ -24,12 +23,18 @@ public class Main {
         int customerRetrivalRate=getVaildInput("Enter Customer Retrieval Rate :");
         int maxTicketCapacity=getVaildInput("Enter Maximum ticket capacity :");
 
+
+
         Configuration config1=new Configuration(totticket,releseRate,customerRetrivalRate,maxTicketCapacity);
         ConfigurationController configurationController=new ConfigurationController();
         configurationController.writeAll(config1);
         ticketPool1=new ticketPool(totticket,maxTicketCapacity);
 
-        String command=getValidCommand("Enter Command(Start or Stop) :");
+        defaultCustomers(customerRetrivalRate);
+        defaultVendors(releseRate);
+
+        Addprocess(customerRetrivalRate,releseRate);
+        String command=getValidCommand("Enter Command(Start ) to Run programme :");
         if(command.equalsIgnoreCase("start")) {
             startVendorOperations(releseRate);
             startCustomerOperations(customerRetrivalRate);
@@ -68,10 +73,8 @@ public class Main {
     }
 
     public static void startVendorOperations(int releseRate){
-        for(int i=0;i<5;i++){
-            String name="Vendor-"+(i+1);
-            Vendor vendor=new Vendor(ticketPool1,releseRate,name);
-            Thread vendorthread=new Thread(vendor);
+        for(int i=0;i<Vendoreslist.size();i++){
+            Thread vendorthread=new Thread(Vendoreslist.get(i));
             VendoresThreadlist.add(vendorthread);
             vendorthread.start();
 
@@ -79,10 +82,8 @@ public class Main {
         }
     }
     public static void startCustomerOperations(int customerRetrivalRate){
-        for (int i=0;i<5;i++){
-            String name="Customer-"+(i+1);
-            Customer customer=new Customer(ticketPool1,customerRetrivalRate,name);
-            Thread customerThread =new Thread(customer);
+        for (int i=0;i<customerslist.size();i++){
+            Thread customerThread =new Thread(customerslist.get(i));
             customersThreadlist.add(customerThread);
             customerThread.start();
 
@@ -143,6 +144,67 @@ public class Main {
             }
         }
         return command;
+    }
+    public static void Addprocess(int customerRetrivalRate,int releseRate){
+        L1:while(true) {
+            try {
+                Scanner input = new Scanner(System.in);
+                System.out.println("\u001b[33m");
+                System.out.println("[1]Add Customer ");
+                System.out.println("[2]Add Vendor ");
+                System.out.println("[3]Close menu");
+                System.out.print("Enter an option ");
+                System.out.println("\u001b[0m");
+                int num = input.nextInt();
+                switch (num) {
+                    case 1:
+                        AddCustomer(customerRetrivalRate);
+                        break;
+                    case 2:
+                        addVendor(releseRate);
+                        break;
+                    case 3:
+                        break L1;
+                    default:
+                        System.out.println("Please select valid option");
+                }
+            }catch (InputMismatchException e){
+                System.out.println("Please Enter valid input !!!");
+            }
+
+        }
+    }
+
+    private static void addVendor(int relaseRate)
+    {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter Vendor name :");
+        String name=input.nextLine();
+        Vendor n1=new Vendor(ticketPool1,relaseRate,name);
+        Vendoreslist.add(n1);
+    }
+
+    public static void AddCustomer(int customerRetrivalRate){
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter Customer name :");
+        String name=input.nextLine();
+        Customer n1=new Customer(ticketPool1,customerRetrivalRate,name);
+        customerslist.add(n1);
+
+    }
+    public static void defaultCustomers(int customerRetirvarate){
+        for(int i=0;i<5;i++){
+            String name="Customer-"+(i+1);
+            Customer customer=new Customer(ticketPool1,customerRetirvarate,name);
+            customerslist.add(customer);
+        }
+    }
+    public static void defaultVendors(int releaserate){
+        for(int i=0;i<5;i++){
+            String name="Vendor-"+(i+1);
+            Vendor vendor=new Vendor(ticketPool1,releaserate,name);
+            Vendoreslist.add(vendor);
+        }
     }
 
 }

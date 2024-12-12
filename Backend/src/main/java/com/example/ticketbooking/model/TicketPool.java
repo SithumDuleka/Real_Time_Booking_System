@@ -3,6 +3,7 @@ package com.example.ticketbooking.model;
 import com.example.ticketbooking.websocket.ActivityWebSocketHandler;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -99,7 +100,7 @@ public class TicketPool {
         }
 
         System.out.println(vendorName + " added " + ticketsToAdd + " tickets. Pool size: " + pool.size());
-        webSocketController.broadcastMessage(vendorName + " added " + ticketsToAdd + " tickets. Pool size: " + pool.size());
+        webSocketController.broadcastMessage(vendorName + " added " + ticketsToAdd + " tickets. Pool size: " + pool.size()+"["+ LocalTime.now() +"]");
 
         if (totalAddedTickets >= totalTickets) {
             System.out.println("Reached the ticket limit!");
@@ -135,7 +136,7 @@ public class TicketPool {
         }
 
         System.out.println(customerName + " purchased " + ticketsToBuy + " tickets. Total sold: " + totalSoldTickets);
-        webSocketController.broadcastMessage(customerName + " purchased " + ticketsToBuy + " tickets. Total sold: " + totalSoldTickets);
+        webSocketController.broadcastMessage(customerName + " purchased " + ticketsToBuy + " tickets. Total sold: " + totalSoldTickets+"["+ LocalTime.now() +"]");
 
         if (totalSoldTickets >= totalTickets) {
             isTerminated = true;
